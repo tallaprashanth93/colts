@@ -18,11 +18,8 @@ public class Lender {
 	private Integer lenderId;
 	
 	@Column
-	private String firstName;
-	
-	@Column
-	private String lastName;
-	
+	private String lenderName;
+		
 	@Column
 	private String emailId;
 	
@@ -40,22 +37,7 @@ public class Lender {
 		this.lenderId = lenderId;
 	}
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
+	
 	public String getEmailId() {
 		return emailId;
 	}
@@ -80,17 +62,19 @@ public class Lender {
 		this.amount = amount;
 	}
 
+	public String getLenderName() {
+		return lenderName;
+	}
+
+	public void setLenderName(String lenderName) {
+		this.lenderName = lenderName;
+	}
+
 	@Override
 	public String toString() {
-		return "Lender [lenderId=" + lenderId + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId="
-				+ emailId + ", mobile=" + mobile + ", amount=" + amount + "]";
+		return "Lender [lenderId=" + lenderId + ", lenderName=" + lenderName + ", emailId=" + emailId + ", mobile="
+				+ mobile + ", amount=" + amount + "]";
 	}
-	
-	
-
 
 	
-	
-	
-
 }

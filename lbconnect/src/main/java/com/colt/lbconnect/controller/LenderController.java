@@ -11,7 +11,7 @@ import com.colt.lbconnect.entities.Lender;
 import com.colt.lbconnect.service.LenderService;
 
 @RestController
-@RequestMapping("/lb")
+@RequestMapping("/lender")
 public class LenderController {
 	
 	@Autowired
@@ -21,7 +21,7 @@ public class LenderController {
 	public String greet() {
 		return "welcome to online loan application";
 	}
-	@GetMapping("/getAll")
+	@GetMapping("/getLenders")
 	public Iterable<Lender> getAll() {
 		return lenderService.getLenders();
 	}
